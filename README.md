@@ -1,29 +1,17 @@
-# CSE330
-
-Zach Glabman 466464 zachglabman
-
-Justin Novellas 486351 jj4619
-
 # Welcome to zCal
 - CSRF token passed for every fetch to the database to prevent malicious attacks, and relevant input is sanitized and output is escaped
 - Validator returns no errors
 - User stays logged in on refresh and AJAX is performed with POST
 
-## Link
+## Homepage
 
 -  [Homepage](http://ec2-54-196-240-51.compute-1.amazonaws.com/~zachglabman/module5-group-m5-466464-486351/frontend.html)
+- If EC2 instance is no longer running, clone the repo and serve on apache webserver (for php)
 
 ## Login info
-Try logging in with the below users (there are more but these few have events)
+Go ahead and create a user. Make sure you add an email.
 
-- username: zach // password: hi
-- username: jj // password: jj
-
-You can also create a user if you want to try that functionality out. Make sure you add an email when creating a user.
-
-## Creative Portion
-
-I mostly followed the wiki when adding a creative portion to the site. Tried my best to make it look pretty as well, so part of my creative (extra) was to create modals to display event information. Spent a lot of time trying to make a good user experience for the creative parts, so I had a few different moving pieces (js functions and php files) to make it work effectively.
+## Extra functionality
 
 **1. Tags**
 - Add an optional tag when creating an event

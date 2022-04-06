@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: scroll;
+}
+
+    .main{
+        background-color: lightskyblue;
+    }
+    .prompt {
+        font-size: 3vw;
+    }
+
+    #create_event{
+        margin-left: 20%;
+    }
+
+    #event_details{
+        margin-left: 20%;
+    }
+
+    .subscription{
+        margin-left: 20%;
+    }
+
+    .calendar {
+        background-color: floralwhite;
+        margin: 10%;
+    }
+
+    .month-year {
+        padding: 20px 35px;
+        text-align: center;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .month-year #prev-month {
+        float: left;
+        width: 20px;
+        padding-top: 5px;
+    }
+
+    .month-year #next-month {
+        float: right;
+        width: 20px;
+        padding-top: 5px;
+    }
+
+    .month-year p {
+        text-align: center;
+        padding-top: 5px;
+        font-size: 4vw;
+    }
+
+    /* .weekdays {
+        padding: 2px;
+    } */
+
+    .weekdays li {
+        display: inline-block;
+        text-align: center;
+        padding: 1px;
+        font-size: 3vw;
+        font-weight: 400;
+        /* roughly 1/7 of the total frame */
+        width: 13.5%;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        gap: 1px;
+    }
+
+    .dates {
+        /* display: grid; */
+        /* roughly 1/7 of the total frame */
+        width: 100%;
+        grid-template-columns: auto auto auto auto auto auto auto;
+        gap: 1px;
+        padding: 2px;
+
+    }
+
+    #date-table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    #date-table tr td {
+        height: 10vw;
+        width: 13.5%;
+        float: left;
+        padding: 1px;
+        font-size: 2vw;
+        border:1px solid #000000;
+        
+    }
+
+    #title {
+        font-size: 4vw;
+    }
+    
+    p{
+        color:black;
+        font-size: 2vw;
+    }
+    .event-preview {
+        font-size: 1vw;
+    }
+
+    .site_title {
+        text-align: center;
+        display: flex;
+        /* margin-top: 15px;
+        margin-left: 20px; */
+    }
+
+    #current_user {
+        float: left;
+    }
+
+    /* zach's preferred navbar setup */
+    .navbar {
+       background: lightpink;
+       height: auto;
+       justify-content: space-evenly;
+       display: flex;
+    }
+    
+    .navbar ul {
+        float:right;
+        overflow: hidden;
+        list-style-type: none;
+    }
+    
+    .navbar ul li {
+        text-decoration: none;
+        color: black;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+    
+    }
+
+    /* hover actions on li */
+    .navbar ul li:hover {
+        background-color: pink;
+        color: black;
+        cursor:pointer;
+    }

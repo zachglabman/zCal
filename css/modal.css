@@ -1,0 +1,41 @@
+/* Modal for event clicks */
+/* https://stackoverflow.com/questions/12411136/javascript-modal-dialog */
+#modal {
+    display: none;
+    /* key to "modal" nature */
+    position: fixed;
+    /* play around w this */
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    /* overflow: scroll; */
+}
+
+#modal-title {
+    font-size: 4vw;
+}
+    
+    /* Modal popup */
+#modal-popup {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+/* using built in symbol functionality (html) */
+#closeModal {
+    float: right;
+    color: gray;
+    font-size: 15px;
+  }
+
+.rendered-event{
+    border:1px solid black;
+}
+  
+/* #closeModal:hover {
+    cursor: pointer;
+} */

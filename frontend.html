@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+
+    <title>zCal</title>
+</head>
+<body>
+
+<header>
+      <div class="navbar">
+        <p id="current_user">
+          <!-- only rendered if user is logged in -->
+        </p>
+
+        <h2 class="site_title">zCal</h2>
+
+        <ul>
+          <!-- <li id="create_event"></li> -->
+          <li id=logout-btn> </li>
+
+        </ul>
+      </div>
+  </header>
+
+<div class = "main">
+<!-- form element so it clears when submitted -->
+<div id="login_flow">
+    <p>
+      Login <br>
+        Username: <input type="text" name="username" id="login_username" required/>
+        Password: <input type="password" name="password" id="login_password" required/>
+        <input type="submit" id="login_submit" name="submit" value="Login"/>
+    </p>
+</div>
+
+<br> <br>
+
+<div id="signup_flow">
+    <p>
+      Register <br>
+        Username: <input type="text" name="username" id="register_username" required/>
+        Password: <input type="password" name="password" id="register_password" required/>
+        Email: <input type="email" name="email" id="email" required/>
+        <input type="submit" id="register_submit" name="submit" value="Register"/>
+    </p>
+</div>
+
+<br> <br>
+
+<!-- only render this if logged in and new event flow is triggered -->
+    
+      <button id="create_event" style="display:none;">New Event</button>
+    
+      <!-- TA said use "style display: none; -->
+      <div id="event_details" style="display:none;">
+          <p>Title: </p>
+            <input type="text" id="title">
+          <br>
+          <p>Start: </p>
+            <input type="datetime-local" id="start">
+          <br>
+          <p>End:</p>
+            <input type="datetime-local" id="end">
+          <br>
+          <p>Notes (optional):</p>
+            <textarea id="content" rows="5" cols="40"></textarea>
+          <br>
+          <p>Tag:</p>
+            <select id="tag" name="tag">
+              <option value="">none</option>
+              <option value="LightCoral">red</option>
+              <option value="LightSalmon">orange</option>
+              <option value="Gold">yellow</option>
+              <option value="LightGreen">green</option>
+              <option value="MediumTurquoise">blue</option>
+              <option value="Plum">purple</option>
+            </select>
+          <br>
+          <p>Invitee:</p>
+          <input type="email" id="invitee-email" placeholder="Enter an email..">
+          <br>
+          <input id="event_id_placeholder" type="text" style="display:none">
+          <button id="new_event_submit">Create Event</button>
+          <button id="save_edit_event" style="display:none;">Save</button>
+          <button id="new_event_cancel">Cancel</button>
+          <button id="save_edit_cancel" style="display:none;">Cancel</button>
+      </div>
+
+      <div class="subscription">
+      <button id="add_subscriber" style="display:none;">Share Calendar</button>
+
+      <div id="subscriber_details" style="display:none;">
+        <p>Email: </p>
+          <input type="email" id="subscriber-email">
+        <br>
+        <button id="new_subscriber_submit">Submit</button>
+        <button id="new_subscriber_cancel">Cancel</button>
+    </div>
+    
+    <button id="add_unsubscriber" style="display:none;">Unshare Calendar</button>
+
+      <div id="unsubscriber_details" style="display:none;">
+        <p>Email: </p>
+          <input type="email" id="unsubscriber-email">
+        <br>
+        <button id="new_unsubscriber_submit">Submit</button>
+        <button id="new_unsubscriber_cancel">Cancel</button>
+    </div>
+  </div>
+
+<!-- three divs wrapped in whole calendar div:
+    1. month, year
+    2. days of the week (seven columns)
+    3. individual days
+ -->
+<div class = "calendar">
+    <div class="month-year">
+            <button id="prev-month"><img src="images/left_arrow.svg" alt="left arrow"></button>
+            <p id = "my-render"></p>
+            <button id="next-month"><img src="images/right_arrow.svg" alt="right arrow"></button>
+    </div>
+    
+    <div class="weekdays">
+        <ul>
+          <li>Sun</li>
+          <li>Mon</li>
+          <li>Tue</li>
+          <li>Wed</li>
+          <li>Thu</li>
+          <li>Fri</li>
+          <li>Sat</li>
+            
+        </ul>
+    </div>
+    
+    <div class="dates">
+      <table id="date-table">
+       
+        <tr>
+          <td>
+
+          </td>
+        </tr>
+      </table>
+  
+    </div>
+</div> 
+
+<div id="modal">
+  <div id="modal-popup">
+
+  </div>
+</div>
+
+<!-- jquery libraries from videos, wiki, web -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js"></script>
+<!-- calendar helper functions approved in wiki -->
+<script src="https://classes.engineering.wustl.edu/cse330/content/calendar.js"></script>
+<!-- main javascript -->
+<script src="js/cal.js"> </script>
+
+</div>
+</body>
+</html>
